@@ -55,6 +55,7 @@ export class DatetimepickComponent implements OnInit {
   
       console.log(this.sharedService.appointment)
       this.appointmentservice.save(this.sharedService.appointment).subscribe();
+      alert("Your booking is confirmed!")
     }
   })
 

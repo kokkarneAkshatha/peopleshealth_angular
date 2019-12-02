@@ -37,6 +37,7 @@ import { AuthGuard } from './auths/auth.guard';
 import { Patientregistration } from './model/patientregistration';
 import { ProfileComponent } from './profile/profile.component';
 import { AppointmentDetailsComponent } from './appointment-details/appointment-details.component';
+import { UserdetailupdateComponent } from './userdetailupdate/userdetailupdate.component';
 
 
 
@@ -71,6 +72,8 @@ import { AppointmentDetailsComponent } from './appointment-details/appointment-d
     ProfileComponent,
 
     AppointmentDetailsComponent,
+
+    UserdetailupdateComponent,
     
     
   ],

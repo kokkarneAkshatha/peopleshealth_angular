@@ -31,6 +31,9 @@ export class ApoointmentService {
   public save(user: Appointment) {
     return this.http.post<Appointment>(this.usersUrl, user);
   }
+  deleteAppointment(id: Number): Observable<any> {
+    return this.http.delete(`${this.usersUrl}/${id}`, { responseType: 'text' });
+  }
   
   
 }

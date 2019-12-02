@@ -19,6 +19,7 @@ import { Navigationbar2Component } from './navigationbar2/navigationbar2.compone
 import { AuthGuard } from './auths/auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { AppointmentDetailsComponent } from './appointment-details/appointment-details.component';
+import { UserdetailupdateComponent } from './userdetailupdate/userdetailupdate.component';
 
 
 const routes: Routes = [
@@ -66,7 +67,7 @@ const routes: Routes = [
   {
     path:'dateandtime',
     component:DatetimepickComponent,
-    data: {  shownav: false ,showHeader: false} , canActivate:[AuthGuard]
+    data: { showHeader: false ,show:false  } , canActivate:[AuthGuard]
   },
   {
     path:'otpform',
@@ -106,12 +107,17 @@ const routes: Routes = [
   {
     path:'profile',
     component:ProfileComponent,
-    data: {  showHeader: false ,show:false,showFooter:false }, canActivate:[AuthGuard]
+    data: {  showHeader: false ,show:false }, canActivate:[AuthGuard]
   },
   {
     path:'appointmentdetails',
     component:AppointmentDetailsComponent,
-    data: {  showHeader: false ,show:false,showFooter:false }, canActivate:[AuthGuard]
+    data: {  showHeader: false ,show:false }, canActivate:[AuthGuard]
+  },
+  {
+    path:'updatedetails',
+    component:UserdetailupdateComponent,
+    data: {  showHeader: false ,show:false }, canActivate:[AuthGuard]
   },
   
 

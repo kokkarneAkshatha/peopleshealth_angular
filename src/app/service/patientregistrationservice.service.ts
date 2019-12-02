@@ -28,5 +28,8 @@ export class PatientregistrationserviceService {
   public findbyemail(user: Patientregistration):Observable<Patientregistration> {
     return this.http.post<Patientregistration>("http://localhost:1234/api/findbyemail", user);
   }
+  public update(id: String, value: any): Observable<Object> {
+    return this.http.put(`${this.usersUrl}/${id}`, value);
+  }
   
 }

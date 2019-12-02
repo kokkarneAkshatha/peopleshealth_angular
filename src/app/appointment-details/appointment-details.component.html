@@ -1,33 +1,43 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<div class="b">
+<div class="b" >
 <div class="container text-center">
+    <div *ngIf="appointment?.length;else no_data_templ">
     <h3>Appointment Details:</h3>
   <table class="table table-borderless" *ngFor="let val of appointment">
    
       <tr>
         <th>Name</th>
-        <td>Ak</td>
+        <td>ramya</td>
        
       </tr>
     
  
       <tr>
         <th>Date of appointment</th>
-        <td>24/11/2019</td>
+        <td>{{val.date}}</td>
        
       </tr>
       <tr>
         <th>Time</th>
-        <td>9:15 am</td>
+        <td>{{val.slot}}</td>
        
       </tr>
       <tr>
         <th>Doctor_details</th>
-        <td>9:15 am</td>
+        <td>Anita</td>
        
       </tr>
-     
+      <tr aria-rowspan="2">
+          <td colspan="2">
+            <span class="button is-small btn-danger" (click)='deleteappointment(val.id)'>Cancel your appointment</span>
+        </td>
+      </tr>
     
   </table>
 </div>
+<ng-template #no_data_templ>
+        <h2 style="align-content: center;">  No daata found...</h2>
+     </ng-template>
 </div>
+</div>
+

@@ -80,6 +80,9 @@ onSubmit(model: loginUser) {
           }
           
         }
+        else{
+          alert("wrong userId or password");
+        }
 
      });
     
